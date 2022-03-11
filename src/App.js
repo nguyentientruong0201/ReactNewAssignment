@@ -1,10 +1,10 @@
 import { useState } from "react";
-import Counterpage from "./Components/pages/Counterpage/Counterpage";
-import InterstPage from "./Components/pages/InterestPage/InterestPage";
+// import Counterpage from "./Components/pages/Counterpage/Counterpage";
+// import InterstPage from "./Components/pages/InterestPage/InterestPage";
 import LoginPage from "./Components/pages/LoginPage/LoginPage";
-import PokemonPage from "./Components/pages/PokemonPage/PokemonPage";
+// import PokemonPage from "./Components/pages/PokemonPage/PokemonPage";
 // import PokemonPage1 from "./Components/pages/PostPage/PostPage";
-import WelcomePage from "./Components/pages/WelcomePage/WelcomePage";
+// import WelcomePage from "./Components/pages/WelcomePage/WelcomePage";
 import {
     BrowserRouter,
     Routes,
@@ -60,10 +60,10 @@ const App = () => {
                 <option value="values">Show Login Page</option>
 
             </select> */}
-            {pageSelected === "welcome" && < WelcomePage />}
-            {pageSelected === "counter" && <Counterpage />}
-            {pageSelected === "interest" && <InterstPage />}
-            {pageSelected === "pokemon" && <PokemonPage />}
+            {/* {pageSelected === "welcome" && < WelcomePage />} */}
+            {/* {pageSelected === "counter" && <Counterpage />} */}
+            {/* {pageSelected === "interest" && <InterstPage />} */}
+            {/* {pageSelected === "pokemon" && <PokemonPage />} */}
             {pageSelected === "pokemon1" && <PostPage />}
             {pageSelected === "values" && <LoginPage />}
 
