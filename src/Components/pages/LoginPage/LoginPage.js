@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import Button from '@mui/material/Button';
+import { FormControl, TextField } from "@mui/material";
 
 function validateEmail(email) {
     
@@ -70,37 +71,41 @@ const LoginPage = () => {
         })
         .then(function (json) {
             console.log("json= ",json);
-            const { token, userIO } = json;
+            const { token, userId } = json;
             localStorage.setItem('token', token);
-            localStorage.setItem('userId', userIO);
+            localStorage.setItem('userId', userId);
             navigate('/profile');
+            window.location.reload();
         });
         
     }
 
     return (
         <div>
-            <form onSubmit={ handleOnSubmit }>
-                <input style={{display: 'block', margin : '20px'}}
+            <FormControl onSubmit={ handleOnSubmit }>
+                <TextField style={{display: 'block', margin : '20px'}}
                  type="text"
                   placeholder="Email"
                   value={ values.email }
                   onChange = { handleInputChange }
                   onBlur={ handleInputBlur }
                   name="email"
-                  ></input>
+                  label="email" variant="standard"
+                  ></TextField>
                   { touched.email && <p style={{color: 'red', margin: '20px'}}>{ errors.email }</p>}
-                <input style={{display: 'block', margin: '20px'}}
+                <TextField style={{display: 'block', margin: '20px'}}
                   type="password"
                   placeholder="Password"
                   value={ values.password }
                   onChange = { handleInputChange }
                   onBlur = { handleInputBlur }
                   name="password"
-                  ></input>
+                  label="password" variant="standard"
+                  ></TextField>
                  { touched.password && <p style={{color: 'red', margin: '20px'}}>{ errors.password }</p>}
-                 <button onClick={onSubmit1} style={{display: 'block', margin: '20px'}} type = "submit">Submit</button>
-            </form>
+                 <Button variant="contained" onClick={onSubmit1} style={{display: 'block', margin: '20px'}} type = "submit">Submit</Button>
+                 {/* <Button variant="text">Text</Button> */}
+            </FormControl>
         </div>
     )
 }

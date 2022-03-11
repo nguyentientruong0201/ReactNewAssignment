@@ -3,8 +3,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 const PostPage = () => {
     const [posts, setPosts] = useState([]);
-    const [IsLoading, setIsLoading] = useState(true);
-    const [error, setError] = useState ('');
+    // const [IsLoading, setIsLoading] = useState(true);
+    // const [error, setError] = useState ('');
 
     useEffect(() => {
         let didCancel = false;
