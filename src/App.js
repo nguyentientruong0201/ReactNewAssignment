@@ -1,3 +1,4 @@
+import React from 'react';
 // import { useState } from "react";
 // import Counterpage from "./Components/pages/Counterpage/Counterpage";
 // import InterstPage from "./Components/pages/InterestPage/InterestPage";
